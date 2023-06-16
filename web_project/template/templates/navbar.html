@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RPI IFC</title>
+    
+    {% load static %}
+    
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #676767;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 130px; /* Default height for screens larger than or equal to 992px */
+        }
+
+        @media (max-width: 991px) {
+            /* Styles for screens smaller than 992px */
+            .navbar {
+                height: 100px; /* Adjust the height for smaller screens */
+            }
+        }
+    
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .navbar-nav .nav-link {
+        position: relative;
+        font-size: 25px;
+        }
+
+        .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #000; /* Change this to your desired line color */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+
+        .navbar-nav .logo-button .nav-link:hover::after {
+        opacity: 0;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            opacity: 1;
+        }
+    
+        .navbar-nav .nav-item:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .bg-red {
+            background-color: rgb(214, 0, 28);
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+        
+        .Arial {
+            font-family: Arial, sans-serif;
+            font-size: small !important;
+        }
+        .dropdown-item:focus{
+            background-color: red !important;
+            color: white !important;
+        }
+        .dropdown-item:hover{
+        background-color: rgb(200, 200, 200);
+        color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="leadership">Leadership</a>
+                            <a class="dropdown-item" href="#">Contact Us</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" target="_blank">Outreach</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" target="_blank">Demos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Enable hover functionality for Bootstrap dropdowns
+        $(document).ready(function () {
+            $('.dropdown').hover(
+                function () {
+                    $(this).addClass('show');
+                    $(this).find('.dropdown-menu').addClass('show');
+                },
+                function () {
+                    $(this).removeClass('show');
+                    $(this).find('.dropdown-menu').removeClass('show');
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>
