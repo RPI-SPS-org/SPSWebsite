@@ -3,3 +3,4 @@
 .venv/
 web_project/template/__pycache__/
 web_project/template/migrations/__pycache__/
+*.pyc
