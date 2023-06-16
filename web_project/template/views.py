@@ -1,10 +1,11 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 #replace return HttpResponse
 # return render(request, 'homepage/homepage.html')
 
 def home(request):
-    return HttpResponse("Hello, Django!")
+    return render(request, 'homepage.html')
 
 def aboutUs(request):
     return HttpRespone("Placeholder")
