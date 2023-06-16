@@ -8,16 +8,16 @@ def home(request):
     return render(request, 'homepage.html')
 
 def aboutUs(request):
-    return HttpResponse("Placeholder")
+    return render(request, 'aboutus.html')
 
 def outreach(request):
-    return HttpResponse("Placeholder")
+    return render(request, 'outreach.html')
 
 def demos(request):
-    return HttpResponse("Placeholder")
+    return render(request, 'demos.html')
 
 def schedule(request):
-    return HttpResponse("Placeholder")
+    return render(request, 'schedule.html')
 
 def resources(request):
-    return HttpResponse("Placeholder")
+    return render(request, 'resources.html')
