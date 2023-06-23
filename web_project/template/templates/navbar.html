@@ -54,6 +54,16 @@
         transition: opacity 0.3s ease;
         }
 
+        .navbar .logo-container{
+            margin-right: 20px;
+        }
+        
+        .navbar img{
+            height: 130px;
+            width: auto;
+            object-fit: contain;
+        }
+
         .navbar-nav .logo-button .nav-link:hover::after {
         opacity: 0;
         }
@@ -91,15 +101,16 @@
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">   
+        <div class="logo-container"> 
+            <a href="/">
+                <img src="{% static 'images/temp.jpg' %}" alt="Button Image">
+            </a>
+        </div>
+        
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item logo-button no-underline">
-                        <a class="nav-link no-underline" href="/">
-                            <img src="{% static 'images/temp.jpg' %}" alt="Button Image" width="150" height="150">
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 
