@@ -12,6 +12,12 @@ def home(request):
 def aboutUs(request):
     return render(request, 'aboutus.html')
 
+def contact(request):
+    return render(request, 'contact.html')
+
+def leadership(request):
+    return render(request, 'leadership.html')
+
 def outreach(request):
     return render(request, 'outreach.html')
 

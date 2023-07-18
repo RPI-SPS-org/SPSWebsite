@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>RPI ClubTemplate</title>
+    <title>Club Template</title>
     
     {% load static %}
     
@@ -54,6 +54,16 @@
         transition: opacity 0.3s ease;
         }
 
+        .navbar .logo-container{
+            margin-right: 20px;
+        }
+        
+        .navbar img{
+            height: 130px;
+            width: auto;
+            object-fit: contain;
+        }
+
         .navbar-nav .logo-button .nav-link:hover::after {
         opacity: 0;
         }
@@ -91,7 +101,13 @@
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">   
+        <div class="logo-container"> 
+            <a href="/">
+                <img src="{% static 'images/temp.jpg' %}" alt="Button Image">
+            </a>
+        </div>
+        
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -106,21 +122,23 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <a class="dropdown-item" href="leadership">Leadership</a>
-                            <a class="dropdown-item" href="#">Contact Us</a>
+                            <a class="dropdown-item" href="contact">Contact Us</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank">Outreach</a>
+                        <a class="nav-link" href="outreach">Outreach</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank">Demos</a>
+                        <a class="nav-link" href="demos">Demos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Schedule</a>
+                        <a class="nav-link" href="schedule">Schedule</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resources</a>
+                        <a class="nav-link" href="resources">Resources</a>
                     </li>
+
+
                 </ul>
             </div>
         </div>
