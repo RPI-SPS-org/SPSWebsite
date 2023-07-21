@@ -1,80 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club Resources</title>
-  <style>
-    /* CSS styles for the Club Information page */
+  <title>Club Template Resources</title>  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    /* Header/Blog Title */
+    .header {
+      padding: 30px;
+      text-align: center;
+      background: white;
     }
     
     header {
       background-color: #333;
       color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    h1 {
-      margin: 0;
-    }
-    
-    nav {
-      background-color: #555;
-      color: #fff;
       padding: 10px;
       text-align: center;
     }
     
-    nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
+    .header h1 {
+      font-size: 50px;
     }
-    
-    main {
-      padding: 20px;
-    }
-    
+
     footer {
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
+    
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {   
+      float: left;
+      width: 75%;
+      padding-left: 20px;
+      background-color: #f1f1f1;
+    }
+    
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      background-color: #f1f1f1;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    /* Add a card effect for articles */
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    /* Clear floats after the columns */
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+      }
+    }
+    
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Club Name</h1>
+    <h1>Club Resources</h1>
   </header>
-  
-    <!-- Navbar -->
-  {% include 'navbar.html' %}
-  
-  <main>
-    <h2>Club Information Resources</h2>
-    <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique leo vel ex auctor, at laoreet lacus bibendum. Mauris mollis ligula ut tellus hendrerit sagittis. Vestibulum eget ipsum eu ex semper mattis et et felis.</p>
 
-    <h3>Club Resources</h3>
-    <ul>
-      <li>Resources 1</li>
-      <li>Resources 2</li>
-      <li>Resources 3</li>
-    </ul>
-    
-    <h3>Helpful Websites</h3>
-    <ul>
-        <li>Website 1</li>
-        <li>Website 2</li>
-        <li>Website 3</li>
-    </ul>
-</main>
-  
+  {% include 'navbar.html' %}
+
+  <div class="row" style="width: 100%; padding-left: 20px;">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>Club Information Resources</h2>
+        <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique leo vel ex auctor, at laoreet lacus bibendum. Mauris mollis ligula ut tellus hendrerit sagittis. Vestibulum eget ipsum eu ex semper mattis et et felis.</p>
+      </div>
+      <div class="card">
+        <h3>Club Resources</h3>
+        <ul>
+          <li>Resources 1</li>
+          <li>Resources 2</li>
+          <li>Resources 3</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h3>Helpful Websites</h3>
+        <ul>
+            <li>Website 1</li>
+            <li>Website 2</li>
+            <li>Website 3</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <footer>
     &copy; 2023 Club Template Website.
   </footer>
