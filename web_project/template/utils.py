@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 from calendar import HTMLCalendar
-from .models import Event
+from template.models import Event
 
 # internal helper functions and classes
 

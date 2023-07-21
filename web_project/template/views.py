@@ -3,8 +3,9 @@ from django.shortcuts import render
 from django.views import generic
 from django.utils.safestring import mark_safe
 from datetime import datetime
-from .models import *
-from .utils import Calendar
+
+from template.models import *
+from template.utils import Calendar
 
 def home(request):
     return render(request, 'homepage.html')
@@ -26,6 +27,9 @@ def demos(request):
 
 def schedule(request):
     return render(request, 'schedule.html')
+
+def calendar(request):
+    return render(request, 'calendar.html')
 
 def resources(request):
     return render(request, 'resources.html')
