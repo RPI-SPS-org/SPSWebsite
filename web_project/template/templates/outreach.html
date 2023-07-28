@@ -4,117 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Club Template Outreach</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0px;
-      padding: 0px;
-    }
-    
-    /* Header/Blog Title */
-    .header {
-      padding: 30px;
-      text-align: center;
-      background: white;
-    }
-    
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-    }
-    
-    .header h1 {
-      font-size: 50px;
-    }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    /* Create two unequal columns that floats next to each other */
-    /* Left column */
-    .leftcolumn {   
-      float: left;
-      width: 75%;
-      padding-left: 20px;
-      background-color: #f1f1f1;
-    }
-    
-    /* Right column */
-    .rightcolumn {
-      float: left;
-      width: 25%;
-      background-color: #f1f1f1;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    
-    /* Add a card effect for articles */
-    .card {
-      background-color: white;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    .demos {
-        background-color: white;
-        padding: 20px;
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .boxes {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .box {
-        text-align: center;
-    }
-
-    .box img {
-        width: 150px; /* Adjust the width of the image as needed */
-        height: 150px; /* Adjust the height of the image as needed */
-    }
-
-    .box p {
-        margin-top: 10px;
-    }
-    
-    /* Clear floats after the columns */
-    .row::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    
-    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 800px) {
-      .leftcolumn, .rightcolumn {   
-        width: 100%;
-        padding: 0;
-      }
-    }
-    
-    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-    @media screen and (max-width: 400px) {
-      .topnav a {
-        float: none;
-        width: 100%;
-      }
-    }
-  </style>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
   <header>
@@ -126,8 +17,8 @@
   <div class="row" style="width: 100%; padding-left: 20px;">
     <div class="leftcolumn">
       <div class="card">
-        <h2>Welcome to Club!</h2>
-        <p>Base overview of club information.</p>
+        <h2>Club Outreach Overview</h2>
+        <p>Base overview of club outreach information.</p>
         <p>Some text..</p>
         <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
       </div>
@@ -160,10 +51,10 @@
     </div>
     <div class="rightcolumn">
       <div class="card">
-        <h2>Meetings</h2>
-          <p>Meeting 1</p>
-          <p>Meeting 2</p>
-          <p>Meeting 3</p>
+        <h2>Outreach Examples</h2>
+          <p>Example 1</p>
+          <p>Example 2</p>
+          <p>Example 3</p>
       
       </div>
       <div class="card">
