@@ -10,7 +10,6 @@
 
     {% load static %}
 
-
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
@@ -58,6 +57,19 @@
             .navbar-nav .nav-item:not(:last-child) {
                 margin-right: 0; /* Remove right margin for smaller screens */
             }
+        }
+
+        /* Add space between menu items in normal mode (larger screens) */
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .navbar-nav .nav-item {
+            flex-grow: 1;
+            text-align: center;
         }
 
         .navbar .logo-container {
