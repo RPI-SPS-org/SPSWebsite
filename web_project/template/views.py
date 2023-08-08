@@ -28,19 +28,15 @@ def demos(request):
 def schedule(request):
     return render(request, 'schedule.html')
 
-def calendar(request):
-    return render(request, 'calendar.html')
-
 def resources(request):
     return render(request, 'resources.html')
 
-
 class CalendarView(generic.ListView):
     model = Event
-    template_name = 'schedule.html'
+    template_name = 'templates/calendar.html'
 
     def get_context_data(self, **keyword_args):
-        context = super.get_context_data(**keyword_args)
+        context = super().get_context_data(**keyword_args)
         d = get_date(self.request.GET.get('day', None))
         cal = Calendar(d.year, d.month)
 
