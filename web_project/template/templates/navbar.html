@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Club Template</title>
-    
+
     {% load static %}
-    
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -21,115 +20,96 @@
             background-color: #676767;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 120px; /* Default height for screens larger than or equal to 992px */
+            font-size: 30px;
+            min-height: 125px;
+            height: 110px; /* Default height for screens larger than or equal to 992px  ORIGINALLY 130*/
         }
 
         @media (max-width: 991px) {
             /* Styles for screens smaller than 992px */
             .navbar {
-                height: 100px; /* Adjust the height for smaller screens */
+                flex-direction: column;
+                height: auto; /* Adjust the height for smaller screens */
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .navbar .logo-container {
+                margin-right: 0;
+            }
+
+            .navbar img {
+                height: 60px; /* Adjust the logo height for smaller screens */
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 18px; /* Adjust the font size of the side nav links */
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none; /* Hide the line under nav links for smaller screens */
+            }
+
+            .navbar-nav .nav-item:not(:last-child) {
+                margin-right: 0; /* Remove right margin for smaller screens */
             }
         }
-    
+
+        /* Add space between menu items in normal mode (larger screens) */
         .navbar-nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
         }
-        .navbar-nav .nav-link {
-        position: relative;
-        font-size: 25px;
+
+        .navbar-nav .nav-item {
+            flex-grow: 1;
+            text-align: center;
         }
 
-        .navbar-nav .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #000; /* Change this to your desired line color */
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        }
-
-        .navbar .logo-container{
+        .navbar .logo-container {
             margin-right: 20px;
         }
-        
-        .navbar img{
+
+        .navbar img {
             height: 130px;
             width: auto;
             object-fit: contain;
         }
 
-        .navbar-nav .logo-button .nav-link:hover::after {
-        opacity: 0;
-        }
-
-        .navbar-nav .nav-link:hover::after {
-            opacity: 1;
-        }
-    
-        .navbar-nav .nav-item:not(:last-child) {
-            margin-right: 10px;
-        }
-
-        .bg-red {
-            background-color: rgb(214, 0, 28);
-        }
-
-        .bold-text {
-            font-weight: bold;
-        }
-        
-        .Arial {
-            font-family: Arial, sans-serif;
-            font-size: small !important;
-        }
-        .dropdown-item:focus{
-            background-color: red !important;
-            color: white !important;
-        }
-        .dropdown-item:hover{
-        background-color: rgb(200, 200, 200);
-        color: black;
-        }
     </style>
 </head>
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">   
-        <div class="logo-container"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="logo-container">
             <a href="/">
                 <img src="{% static 'images/temp.jpg' %}" alt="Button Image">
             </a>
         </div>
-        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            About Us
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <a class="dropdown-item" href="leadership">Leadership</a>
-                            <a class="dropdown-item" href="contact">Contact Us</a>
-                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="outreach">Outreach</a>
+                        <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="demos">Demos</a>
+                        <a class="nav-link" href="outreach">Outreach <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="schedule">Schedule</a>
@@ -138,29 +118,15 @@
                         <a class="nav-link" href="resources">Resources</a>
                     </li>
 
-
                 </ul>
             </div>
         </div>
     </nav>
-    
+
+    <!-- Bootstrap JS (Optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Enable hover functionality for Bootstrap dropdowns
-        $(document).ready(function () {
-            $('.dropdown').hover(
-                function () {
-                    $(this).addClass('show');
-                    $(this).find('.dropdown-menu').addClass('show');
-                },
-                function () {
-                    $(this).removeClass('show');
-                    $(this).find('.dropdown-menu').removeClass('show');
-                }
-            );
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
