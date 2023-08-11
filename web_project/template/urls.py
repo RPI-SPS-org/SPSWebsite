@@ -1,5 +1,6 @@
+# template / urls.py
 from django.urls import path
-from template import views
+from . import views
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -7,5 +8,6 @@ urlpatterns = [
     path("outreach", views.outreach, name="outreach"),
     path("schedule", views.schedule, name="schedule"),
     path("resources", views.resources, name="resources"),
-    path("leadership", views.leadership, name='leadership')
+    path("leadership", views.leadership, name='leadership'),
+    path("calendar", views.CalendarView.as_view(), name="calendar"),
 ]
