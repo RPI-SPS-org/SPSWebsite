@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
   <link rel="stylesheet" type="text/css" href="../static/css/calendar_style.css">
   <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/navbar.css">
   <title>Club Schedule</title>
   <style>
     
@@ -35,13 +35,27 @@
 </head>
 
 <body>
-  <header>
-    <h1>Club Name</h1>
+  <header style="display: flex; align-items: center; text-align: left;">
+    <div style="padding-left: 400px; margin-right: 50px;">
+      <h1>Society of Physics Students</h1>
+      <p>Rensselaer Polytechnic Institute</p>
+    </div>
+    <img src="static/images/logo.png" alt="Logo" style="width: 125px; height: auto;">
   </header>
   
   <!-- Navbar -->
-  {% include 'navbar.html' %}
- 
+  <div class="navbar-container">
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="outreach.html">Outreach</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>  
+  </div> 
+
   <main>
     
     <div class="containerCalendar">
@@ -52,7 +66,7 @@
     </div>
 
   <footer>
-    &copy; 2023 Club Name. All rights reserved.
+    &copy; 2023 RPI Society of Physics Students.
   </footer>
 </body>
 </html>

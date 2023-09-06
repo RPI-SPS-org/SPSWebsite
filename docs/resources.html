@@ -5,18 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Club Template Resources</title>
   <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/navbar.css">
 </head>
 <body>
-  <header>
-    <h1>Club Resources</h1>
+  <header style="display: flex; align-items: center; text-align: left;">
+    <div style="padding-left: 400px; margin-right: 50px;">
+      <h1>Society of Physics Students</h1>
+      <p>Rensselaer Polytechnic Institute</p>
+    </div>
+    <img src="static/images/logo.png" alt="Logo" style="width: 125px; height: auto;">
   </header>
 
-  {% include 'navbar.html' %}
+  <div class="navbar-container">
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="outreach.html">Outreach</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>  
+  </div>
 
   <div class="row" style="width: 100%; padding-left: 20px;">
     <div class="leftcolumn">
       <div class="card">
-        <h2>Club Information Resources</h2>
+        <h2>SPS Resources</h2>
         <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique leo vel ex auctor, at laoreet lacus bibendum. Mauris mollis ligula ut tellus hendrerit sagittis. Vestibulum eget ipsum eu ex semper mattis et et felis.</p>
       </div>
       <div class="card">
@@ -41,7 +56,7 @@
   </div>
 
   <footer>
-    &copy; 2023 Club Template Website.
+    &copy; 2023 RPI Society of Physics Students.
   </footer>
 </body>
 </html>
