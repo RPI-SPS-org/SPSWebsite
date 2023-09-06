@@ -1,0 +1,14 @@
+.carousel {
+    margin: 0 auto; /* Center the carousel horizontally */
+    max-width: 400px; /* Set a maximum width for the carousel */
+}
+
+.carousel-item {
+    height: 300px; /* Set a fixed height for the carousel items */
+}
+
+.carousel-item img {
+    max-width: 100%; /* Make the images responsive and fit within the carousel container */
+    height: 100%; /* Ensure that images fill the carousel item while maintaining their aspect ratio */
+    object-fit: cover; /* Crop the image to fill the container while preserving its dimensions */
+}
