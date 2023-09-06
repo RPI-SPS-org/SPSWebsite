@@ -1,0 +1,67 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #676767;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 30px;
+    min-height: 125px;
+    height: 110px; /* Default height for screens larger than or equal to 992px  ORIGINALLY 130*/
+}
+
+@media (max-width: 991px) {
+    /* Styles for screens smaller than 992px */
+    .navbar {
+        flex-direction: column;
+        height: auto; /* Adjust the height for smaller screens */
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .navbar .logo-container {
+        margin-right: 0;
+    }
+
+    .navbar img {
+        height: 60px; /* Adjust the logo height for smaller screens */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px; /* Adjust the font size of the side nav links */
+    }
+
+    .navbar-nav .nav-link::after {
+        display: none; /* Hide the line under nav links for smaller screens */
+    }
+
+    .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 0; /* Remove right margin for smaller screens */
+    }
+}
+
+/* Add space between menu items in normal mode (larger screens) */
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-nav .nav-item {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar .logo-container {
+    margin-right: 20px;
+}
+
+.navbar img {
+    height: 130px;
+    width: auto;
+    object-fit: contain;
+}
