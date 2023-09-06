@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Template Website</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Club Template Website</h1>
+    <p>Rensselaer Polytechnic Institute</p>
+  </header>
+
+  {% include 'navbar.html' %}
+
+  <div class="row" style="width: 100%; padding-left: 20px;">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>Welcome to Club!</h2>
+        <p>Base overview of club information.</p>
+        <p>Some text..</p>
+        <p>Here is where information about your club will go. </p>
+      </div>
+      <div class="card">
+        {% include 'carousel.html' %}
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>Meetings</h2>
+          <p>Meeting 1</p>
+          <p>Meeting 2</p>
+          <p>Meeting 3</p>
+      
+      </div>
+      <div class="card">
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Club Template Website.
+  </footer>
+</body>
+</html>
