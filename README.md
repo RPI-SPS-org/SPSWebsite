@@ -1,2 +1,2 @@
-# ClubTemplate
-A template for RPI clubs
+# SPS Website
+A website for the RPI Society of Physics Students
