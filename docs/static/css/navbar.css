@@ -7,61 +7,46 @@
     font-size: 30px;
     min-height: 125px;
     height: 110px; /* Default height for screens larger than or equal to 992px  ORIGINALLY 130*/
-}
-
-@media (max-width: 991px) {
+  }
+  
+  @media (max-width: 991px) {
     /* Styles for screens smaller than 992px */
     .navbar {
-        flex-direction: column;
-        height: auto; /* Adjust the height for smaller screens */
+      flex-direction: column;
+      height: auto; /* Adjust the height for smaller screens */
     }
-
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .navbar .logo-container {
-        margin-right: 0;
-    }
-
-    .navbar img {
-        height: 60px; /* Adjust the logo height for smaller screens */
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 18px; /* Adjust the font size of the side nav links */
-    }
-
-    .navbar-nav .nav-link::after {
-        display: none; /* Hide the line under nav links for smaller screens */
-    }
-
-    .navbar-nav .nav-item:not(:last-child) {
-        margin-right: 0; /* Remove right margin for smaller screens */
-    }
-}
-
-/* Add space between menu items in normal mode (larger screens) */
-.navbar-nav {
+  }
+  
+  /* Add space between menu items in normal mode (larger screens) */
+  .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-.navbar-nav .nav-item {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.navbar .logo-container {
+  }
+  
+  .navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar-links li {
     margin-right: 20px;
-}
-
-.navbar img {
-    height: 130px;
-    width: auto;
-    object-fit: contain;
-}
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px; /* Add padding to style them as buttons */
+    border: 1px solid #fff; /* Add a border to style them as buttons */
+    border-radius: 5px; /* Round the button corners */
+    transition: background-color 0.3s; /* Add a smooth transition for hover effect */
+  }
+  
+  .navbar-links a:hover {
+    background-color: #555; /* Change background color on hover */
+  }
+  
