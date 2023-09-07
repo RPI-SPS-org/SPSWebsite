@@ -2,148 +2,148 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RPI SPS</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/navbar.css">
-    <link rel="stylesheet" href="static/css/carousel.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPI SPS</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/navbar.css">
+  <link rel="stylesheet" href="static/css/carousel.css">
 </head>
 
 <body>
-    <header style="display: flex; align-items: center; text-align: left;">
-        <div class="header-block">
-            <h1>Society of Physics Students</h1>
-            <p>Rensselaer Polytechnic Institute</p>
-        </div>
-        <img src="static/images/logo.png" alt="Logo" style="width: 125px; height: auto;">
-    </header>
-
-    <div class="navbar-container">
-        <nav class="navbar">
-            <ul class="navbar-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
-        </nav>
+  <header style="display: flex; align-items: center; text-align: left;">
+    <div class="header-block">
+      <h1>Society of Physics Students</h1>
+      <p>Rensselaer Polytechnic Institute</p>
     </div>
+    <img src="static/images/logo.png" alt="Logo" style="width: 125px; height: auto;">
+  </header>
 
-    <div class="row" style="width: 100%;">
-        <div class="leftcolumn">
-            <div class="card">
-                <h2>Welcome to SPS!</h2>
-                <p>Base overview of club information.</p>
-                <p>Some text..</p>
-                <p>Here is where information about your club will go.</p>
-            </div>
-            <div class="card">
+  <div class="navbar-container">
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="outreach.html">Outreach</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </div>
 
-                <div class="slideshow-container">
-                    <div class="mySlides fade">
-                        <img src="static/images/image1.jpeg" class="pics" />
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="static/images/image2.jpeg" class="pics" />
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="static/images/image3.jpeg" class="pics" />
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
+  <div class="row" style="width: 100%;">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>Welcome to SPS!</h2>
+        <p>Base overview of club information.</p>
+        <p>Some text..</p>
+        <p>Here is where information about your club will go.</p>
+      </div>
+      <div class="card">
 
-                <!--    Putting in the click dots   -->
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-
-                <script>
-                    var slideIndex = 0;
-                    showSlides();
-                    //add the global timer variable
-                    var slides, dots, timer;
-
-                    function showSlides() {
-                        var i;
-                        slides = document.getElementsByClassName("mySlides");
-                        dots = document.getElementsByClassName("dot");
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
-                        }
-                        slideIndex++;
-                        if (slideIndex > slides.length) { slideIndex = 1 }
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                        }
-                        slides[slideIndex - 1].style.display = "block";
-                        dots[slideIndex - 1].className += " active";
-                        //put the timeout in the timer variable
-                        timer = setTimeout(showSlides, 4000);
-                    }
-
-                    function plusSlides(position) {
-                        //clear/stop the timer
-                        clearTimeout(timer);
-                        slideIndex += position;
-                        if (slideIndex > slides.length) { slideIndex = 1 }
-                        else if (slideIndex < 1) { slideIndex = slides.length }
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
-                        }
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                        }
-                        slides[slideIndex - 1].style.display = "block";
-                        dots[slideIndex - 1].className += " active";
-                        //create a new timer
-                        timer = setTimeout(showSlides, 4000);
-                    }
-
-                    function currentSlide(index) {
-                        //clear/stop the timer
-                        clearTimeout(timer);
-                        if (index > slides.length) { index = 1 }
-                        else if (index < 1) { index = slides.length }
-                        //set the slideIndex with the index of the function
-                        slideIndex = index;
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
-                        }
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                        }
-                        slides[index - 1].style.display = "block";
-                        dots[index - 1].className += " active";
-                        //create a new timer
-                        timer = setTimeout(showSlides, 4000);
-                    }
-                </script>
-
-            </div>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="static/images/image1.jpeg" class="pics" />
+          </div>
+          <div class="mySlides fade">
+            <img src="static/images/image2.jpeg" class="pics" />
+          </div>
+          <div class="mySlides fade">
+            <img src="static/images/image3.jpeg" class="pics" />
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <div class="rightcolumn">
-            <div class="card">
-                <h2>Meetings</h2>
-                <p>Meeting 1</p>
-                <p>Meeting 2</p>
-                <p>Meeting 3</p>
-            </div>
-            <div class="card">
-                <h2>Contact Us</h2>
-                <p>Email: info@example.com</p>
-                <p>Phone: 123-456-7890</p>
-            </div>
+
+        <!--    Putting in the click dots   -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+
+        <script>
+          var slideIndex = 0;
+          showSlides();
+          //add the global timer variable
+          var slides, dots, timer;
+
+          function showSlides() {
+            var i;
+            slides = document.getElementsByClassName("mySlides");
+            dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            //put the timeout in the timer variable
+            timer = setTimeout(showSlides, 4000);
+          }
+
+          function plusSlides(position) {
+            //clear/stop the timer
+            clearTimeout(timer);
+            slideIndex += position;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            else if (slideIndex < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            //create a new timer
+            timer = setTimeout(showSlides, 4000);
+          }
+
+          function currentSlide(index) {
+            //clear/stop the timer
+            clearTimeout(timer);
+            if (index > slides.length) { index = 1 }
+            else if (index < 1) { index = slides.length }
+            //set the slideIndex with the index of the function
+            slideIndex = index;
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[index - 1].style.display = "block";
+            dots[index - 1].className += " active";
+            //create a new timer
+            timer = setTimeout(showSlides, 4000);
+          }
+        </script>
+
+      </div>
     </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>Meetings</h2>
+        <p>Meeting 1</p>
+        <p>Meeting 2</p>
+        <p>Meeting 3</p>
+      </div>
+      <div class="card">
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        &copy; 2023 RPI Society of Physics Students.
-    </footer>
+  <footer>
+    &copy; 2023 RPI Society of Physics Students.
+  </footer>
 </body>
 
 </html>
