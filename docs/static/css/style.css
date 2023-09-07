@@ -3,39 +3,44 @@
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.header-block {
+  padding-left: 30%;
+  margin-right: 50px;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
-    margin: 0px;
-    padding: 0px;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0px;
+  padding: 0px;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 .header {
-    padding: 30px;
-    text-align: center;
-    background: white;
+  padding: 30px;
+  text-align: center;
+  background: white;
 }
 
 .header h1 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 /* Create two unequal columns that float next to each other */
 /* Left column */
-.leftcolumn {   
+.leftcolumn {
   float: left;
   width: 75%;
   padding-left: 40px;
@@ -61,30 +66,32 @@ footer {
 }
 
 .demos {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .boxes {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .box {
-    text-align: center;
+  text-align: center;
 }
 
 .box img {
-    width: 150px; /* Adjust the width of the image as needed */
-    height: 150px; /* Adjust the height of the image as needed */
+  width: 150px;
+  /* Adjust the width of the image as needed */
+  height: 150px;
+  /* Adjust the height of the image as needed */
 }
 
 .box p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /* Clear floats after the columns */
@@ -96,7 +103,9 @@ footer {
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+
+  .leftcolumn,
+  .rightcolumn {
     width: 100%;
     padding: 0;
   }
@@ -112,21 +121,28 @@ footer {
 
 /* Mobile header styles */
 @media (max-width: 767px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    /* Remove padding-left */
+  }
 
-    header div {
-        padding-left: 0;
-        margin-right: 0;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+  .header-block {
+    padding-left: 0;
+  }
 
-    header img {
-        width: 100px; /* Adjust the width as needed for mobile */
-        height: auto;
-    }
+  header div {
+    padding-left: 0;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  header img {
+    width: 100px;
+    /* Adjust the width as needed for mobile */
+    height: auto;
+  }
 }

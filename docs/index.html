@@ -12,7 +12,7 @@
 
 <body>
     <header style="display: flex; align-items: center; text-align: left;">
-        <div style="padding-left: 400px; margin-right: 50px;">
+        <div class="header-block">
             <h1>Society of Physics Students</h1>
             <p>Rensselaer Polytechnic Institute</p>
         </div>
@@ -83,7 +83,7 @@
                         slides[slideIndex - 1].style.display = "block";
                         dots[slideIndex - 1].className += " active";
                         //put the timeout in the timer variable
-                        timer = setTimeout(showSlides, 4000); 
+                        timer = setTimeout(showSlides, 4000);
                     }
 
                     function plusSlides(position) {
