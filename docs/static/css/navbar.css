@@ -43,6 +43,7 @@
 
 @media (max-width: 767px) {
   .navbar-links a {
-    font-size: 15px !important;
+    font-size: 11px;
+    padding: 10px 15px;
   }
 }
