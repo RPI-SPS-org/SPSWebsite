@@ -39,7 +39,6 @@ footer {
 }
 
 /* Create two unequal columns that float next to each other */
-/* Left column */
 .leftcolumn {
   float: left;
   width: 75%;
@@ -48,7 +47,6 @@ footer {
   background-color: #f1f1f1;
 }
 
-/* Right column */
 .rightcolumn {
   float: left;
   width: 25%;
@@ -58,11 +56,11 @@ footer {
   padding-bottom: 20px;
 }
 
-/* Add a card effect for articles */
 .card {
   background-color: white;
   padding: 20px;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 .demos {
@@ -85,9 +83,7 @@ footer {
 
 .box img {
   width: 150px;
-  /* Adjust the width of the image as needed */
   height: 150px;
-  /* Adjust the height of the image as needed */
 }
 
 .box p {
@@ -102,6 +98,7 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+
   .leftcolumn,
   .rightcolumn {
     width: 100%;
@@ -131,8 +128,7 @@ footer {
   }
 
   header img {
-    width: 100px;
-    /* Adjust the width as needed for mobile */
-    height: auto;
+    display: none;
   }
+
 }
