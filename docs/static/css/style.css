@@ -82,8 +82,8 @@ footer {
 }
 
 .box img {
-  width: 150px;
-  height: 150px;
+  width: 60%;
+  height: auto;
 }
 
 .box p {
